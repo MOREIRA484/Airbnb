@@ -17,11 +17,19 @@ struct ExploreView: View {
                     
                     ForEach(0 ... 5, id: \.self){ listing in
                         
-                       ListingItemView()
-                            .frame(height: 420)
-                            .cornerRadius(10)
+                        NavigationLink(value: listing) {
+                            ListingItemView()
+                                 .frame(height: 420)
+                                 .cornerRadius(10)
+                        }
                     }
                 }
+               
+            }
+            .navigationDestination(for: Int.self) { listing in
+                ListingDetailView()
+                    .navigationBarBackButtonHidden()
+                
             }
         }
     }
