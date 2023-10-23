@@ -16,6 +16,7 @@
 		8E4F7AC52AE1BB7C00B195FD /* SearchAndFilterBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F7AC42AE1BB7C00B195FD /* SearchAndFilterBar.swift */; };
 		8E4F7AC72AE1C08F00B195FD /* ListingDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F7AC62AE1C08F00B195FD /* ListingDetailView.swift */; };
 		8E4F7ACA2AE30EC600B195FD /* ListingImageCarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F7AC92AE30EC600B195FD /* ListingImageCarouselView.swift */; };
+		8E4F7ACC2AE70B8E00B195FD /* DestinationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E4F7ACB2AE70B8E00B195FD /* DestinationSearchView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		8E4F7AC42AE1BB7C00B195FD /* SearchAndFilterBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchAndFilterBar.swift; sourceTree = "<group>"; };
 		8E4F7AC62AE1C08F00B195FD /* ListingDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingDetailView.swift; sourceTree = "<group>"; };
 		8E4F7AC92AE30EC600B195FD /* ListingImageCarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListingImageCarouselView.swift; sourceTree = "<group>"; };
+		8E4F7ACB2AE70B8E00B195FD /* DestinationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DestinationSearchView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 			children = (
 				8E4F7AC02AE1B0A800B195FD /* ExploreView.swift */,
 				8E4F7AC42AE1BB7C00B195FD /* SearchAndFilterBar.swift */,
+				8E4F7ACB2AE70B8E00B195FD /* DestinationSearchView.swift */,
 			);
 			path = Explore;
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E4F7ACA2AE30EC600B195FD /* ListingImageCarouselView.swift in Sources */,
+				8E4F7ACC2AE70B8E00B195FD /* DestinationSearchView.swift in Sources */,
 				8E4F7AA92AE1ADB600B195FD /* ContentView.swift in Sources */,
 				8E4F7AC32AE1B21000B195FD /* ListingItemView.swift in Sources */,
 				8E4F7AC12AE1B0A800B195FD /* ExploreView.swift in Sources */,

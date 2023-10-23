@@ -37,14 +37,14 @@ struct ListingDetailView: View {
                 
                 Button {
                     dismiss()
-                } label: {
+                }  label: {
+                  
                     Image(systemName: "chevron.left")
+                        .frame(width: 50, height: 50)
                         .foregroundStyle(.black)
-                        .background {
-                            Circle()
-                                .fill(.white)
-                                .frame(width: 32, height: 32)
-                        }
+                        .background(.white)
+                        .cornerRadius(50)
+                        
                 }
                 .padding(50)
             }
