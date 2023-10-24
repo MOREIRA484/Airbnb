@@ -40,7 +40,7 @@ struct ListingDetailView: View {
                 }  label: {
                   
                     Image(systemName: "chevron.left")
-                        .frame(width: 50, height: 50)
+                        .frame(width: 30, height: 30)
                         .foregroundStyle(.black)
                         .background(.white)
                         .cornerRadius(50)
