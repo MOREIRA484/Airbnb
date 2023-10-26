@@ -38,17 +38,18 @@ struct ProfileView: View {
                     .underline()
                     
             }
+            .padding(.horizontal)
             .font(.caption)
+            
+            //Profile options
+            VStack {
+                ProfileOptionRowView(imageName: "gear", title: "Setting")
+                ProfileOptionRowView(imageName: "gear", title: "Accessibility")
+                ProfileOptionRowView(imageName: "questionmark.circle", title: "visit the help center")
+            }
+            .padding(.top)
         }
-        
-        
-        //Profile options
-        VStack(spacing: 24) {
-            ProfileOptionRowView(imageName: "gear", title: "Setting")
-            ProfileOptionRowView(imageName: "gear", title: "Accessibility")
-            ProfileOptionRowView(imageName: "questionmark.circle", title: "visit the help center")
-        }
-        .padding(.vertical)
+        .padding(.horizontal)
     }
 }
 

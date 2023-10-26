@@ -216,6 +216,7 @@ struct ListingDetailView: View {
             }
                         
             }
+        .toolbar(.hidden, for: .tabBar)
         .padding(.bottom, 64)
         .overlay(alignment: .bottom) {
             
