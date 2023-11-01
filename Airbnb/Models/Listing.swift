@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct Listing: Identifiable, Codable {
+struct Listing: Identifiable, Codable, Hashable {
     
     let id: String
     let ownerUid: String
@@ -20,6 +20,7 @@ struct Listing: Identifiable, Codable {
     var pricePerNight: Int
     let latitude: Double
     let longitude: Double
+    var ImageUrl: [String]
     let address: String
     let city: String
     let state: String
@@ -94,7 +95,7 @@ enum listingAmenities: Int,Codable, Identifiable, Hashable {
                 case .tv: return "tv"
                 case .alarmSystem : return "checkerboard.shield"
                 case .office: return "pencil.and.ruler.fill"
-                case .balcony: return "Building"
+                case .balcony: return "building"
                 }
             }
         

@@ -9,30 +9,24 @@ import SwiftUI
 
 struct ListingImageCarouselView: View {
     
-    var images = [
-        "listing-1",
-        "listing-2",
-        "listing-3",
-        "listing-4",
-    ]
+    let listing: Listing
     
     var body: some View {
         
         
         TabView {
-            ForEach(images, id: \.self) { image in
+            ForEach(listing.ImageUrl, id: \.self) { imagem in
                 
-                Image(image)
+                Image(imagem)
                     .resizable()
                     .scaledToFill()
             }
         }
-            .frame(height: 320)
-            .cornerRadius(10)
+            
             .tabViewStyle(.page)
     }
 }
 
 #Preview {
-    ListingImageCarouselView()
+    ListingImageCarouselView(listing: DeveloperPreview.shared.listings[0])
 }

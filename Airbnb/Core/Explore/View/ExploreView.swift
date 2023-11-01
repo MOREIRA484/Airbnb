@@ -10,18 +10,19 @@ import SwiftUI
 struct ExploreView: View {
     
     @State private var showDetinationSearchView = false
+    @StateObject var viewModel = ExploreViewModel(service: ExploreService())
     
     var body: some View {
         NavigationStack {
             
             if showDetinationSearchView {
-                
-                DestinationSearchView(show: $showDetinationSearchView)
+                DestinationSearchView(show: $showDetinationSearchView, viewModel: viewModel)
+                   
             } else {
                 ScrollView {
                     LazyVStack(spacing: 32) {
                         
-                       SearchAndFilterBar()
+                        SearchAndFilterBar(location: $viewModel.searchLocation)
                             .onTapGesture {
                                 withAnimation(.snappy) {
                                     showDetinationSearchView.toggle()
@@ -29,18 +30,19 @@ struct ExploreView: View {
                                 }
                             }
                         
-                        ForEach(0 ... 5, id: \.self){ listing in
+                        ForEach(viewModel.listings){ listing in
                             
                             NavigationLink(value: listing) {
-                                ListingItemView()
+                                
+                                ListingItemView(listing: listing)
                                      .frame(height: 420)
                                      .cornerRadius(10)
                             }
                         }
                     }
                 }
-                .navigationDestination(for: Int.self) { listing in
-                    ListingDetailView()
+                .navigationDestination(for: Listing.self) { listing in
+                    ListingDetailView(listing: listing)
                         .navigationBarBackButtonHidden()
                     
                 }
